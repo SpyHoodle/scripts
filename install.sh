@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Make all scripts executable
 echo "Making all scripts executable"
