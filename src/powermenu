@@ -1,0 +1,9 @@
+#!/bin/bash
+
+poweroff()   { sudo poweroff        ;}
+restart()    { killall -HUP dwm     ;}
+reboot()     { sudo reboot          ;}
+lock()       { bosskey              ;}
+
+func="$(declare -F | awk '{print $3}' | dmenu -b -i -p "Powermenu:")"
+[ -z "$func" ] || "$func"
