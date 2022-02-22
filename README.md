@@ -6,3 +6,20 @@ A collection of scripts that I found or created for my system
 `dmount` - dmenu script to mount any drive on linux to a location<br>
 `plumb` - plumbing script based off of [this video](https://youtu.be/RlMxbQmMz_4)<br>
 `sswm` - a screenshot wrapper for maim, for taking screenshots (requires maim)
+
+## install
+**Note:** ~/.local/bin must be added to your `$PATH`, as scripts will be installed here
+
+Clone the git repository
+```sh
+git clone https://github.com/SpyHoodle/scripts
+```
+Change directory to scripts
+```sh
+cd scripts
+```
+Make install.sh executable and run it
+```sh
+chmod +x install.sh
+./install.sh
+```
