@@ -3,6 +3,7 @@ A collection of scripts that I found or created for my system
 
 ## the scripts
 `statusbar` - scripts for any statusbar, such as [dwmblocks](https://github.com/SpyHoodle/dwmblocks)<br>
+`powermenu` - script to reboot, poweroff, etc. for a system
 `weather` - get the weather in the terminal (requires curl)<br>
 `dmount` - dmenu script to mount any drive on linux to a location<br>
 `plumb` - plumbing script based off of [this video](https://youtu.be/RlMxbQmMz_4)<br>
