@@ -1,0 +1,7 @@
+#!/bin/sh
+
+mem=$(free --mebi | sed -n '2{p;q}' | awk '{printf ("%2.2f/%2.2f", ( $3 / 1024), ($2 / 1024))}')
+percent=$(free -m | awk 'NR==2{printf "%.2f%%\t\t", $3*100/$2 }' | awk '{print int($0)}')
+icon=""
+
+echo "$icon $mem""GB"

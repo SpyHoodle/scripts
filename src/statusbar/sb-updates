@@ -1,0 +1,12 @@
+#!/bin/sh
+
+updates=$(paru -Qu | wc -l )
+icon=""
+
+if [ $updates = 1 ]; then
+	word="update"
+else
+	word="updates"
+fi
+
+echo "$icon $updates $word"

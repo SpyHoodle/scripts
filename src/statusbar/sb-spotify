@@ -1,0 +1,26 @@
+#!/bin/bash
+
+PLAYER="spotify"
+FORMAT="{{ title }}"
+
+PLAYERCTL_STATUS=$(playerctl --player=$PLAYER status 2>/dev/null)
+SONG=$(playerctl metadata --player $PLAYER --format "$FORMAT")
+EXIT_CODE=$?
+
+if [ $EXIT_CODE -eq 0 ]; then
+    STATUS=$PLAYERCTL_STATUS
+else
+    STATUS="Offline"
+fi
+
+if [ "$1" == "--status" ]; then
+    echo "" "$STATUS"
+else
+    if [ "$STATUS" = "Stopped" ]; then
+        echo " Stopped"
+    elif [ "$STATUS" = "Paused"  ]; then
+        echo "" "$SONG"
+    elif [ "$STATUS" = "Playing"  ]; then
+        echo "" "$SONG"
+    fi
+fi

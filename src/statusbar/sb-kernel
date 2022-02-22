@@ -1,0 +1,5 @@
+#!/bin/sh
+
+kernel=$(uname -r)
+icon=""
+echo "$icon $kernel"

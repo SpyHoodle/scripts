@@ -1,0 +1,6 @@
+#!/bin/sh
+
+uptime=$(uptime | awk '{print $3}' | sed 's/,//')
+icon=""
+
+echo "$icon $uptime"
