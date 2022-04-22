@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sudo sleep 0
+nsxiv -r ~/pix/wallpapers
